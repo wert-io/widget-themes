@@ -1,0 +1,17 @@
+{
+  "background": "#FFFFFF",
+  "buttons": "#161D25",
+  "buttons-text": "#FDFDFD",
+  "icons": "#BBC0DC",
+  "links": "#2D35E8",
+  "main-text": "#161D25",
+  "scroll-thumb": "#D2D3D4",
+  "scroll-track": "#F5F6F8",
+  "secondary-buttons": "#F5F6F8",
+  "secondary-buttons-text": "#161D25",
+  "secondary-text": "#8E8EAE",
+
+  "success": "#58D443",
+  "warning": "#FBAC19",
+  "error": "#E2232B"
+}

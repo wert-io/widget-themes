@@ -1,0 +1,30 @@
+{
+  "name": "widget-themes",
+  "version": "1.0.0",
+  "description": "WertWidget Themes Helper",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wert-io/widget-themes.git"
+  },
+  "author": "@wert-io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wert-io/widget-themes/issues"
+  },
+  "homepage": "https://github.com/wert-io/widget-themes#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.25.0",
+    "eslint-plugin-import": "^2.22.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@types/color": "^3.0.2",
+    "color": "^4.1.0"
+  }
+}
