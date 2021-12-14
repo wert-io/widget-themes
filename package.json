@@ -1,5 +1,5 @@
 {
-  "name": "widget-themes",
+  "name": "@wert-io/widget-themes",
   "version": "1.0.0",
   "description": "WertWidget Themes Helper",
   "main": "index.js",
