@@ -33,11 +33,6 @@ const defaultSemanticColors = <semanticColors> defaultSemantic;
 const darkSemanticColors = <semanticColors> darkSemantic;
 
 const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: boolean): theme => {
-  /* BEWARE!
-
-      Changes in this function require changes in @/assets/css/colors.styl
-
-  */
   const buttonsColorRGBArray = getRGBArray(semanticColors.buttons);
   const secondaryTextColorRGBArray = getRGBArray(semanticColors['secondary-text']);
   const iconsColorRGBArray = getRGBArray(semanticColors.icons);

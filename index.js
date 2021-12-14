@@ -8,11 +8,6 @@ const colors_transformations_1 = require("./helpers/colors-transformations");
 const defaultSemanticColors = default_json_1.default;
 const darkSemanticColors = dark_json_1.default;
 const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
-    /* BEWARE!
-  
-        Changes in this function require changes in @/assets/css/colors.styl
-  
-    */
     const buttonsColorRGBArray = (0, colors_transformations_1.getRGBArray)(semanticColors.buttons);
     const secondaryTextColorRGBArray = (0, colors_transformations_1.getRGBArray)(semanticColors['secondary-text']);
     const iconsColorRGBArray = (0, colors_transformations_1.getRGBArray)(semanticColors.icons);
