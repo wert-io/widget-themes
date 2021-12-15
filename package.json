@@ -4,7 +4,8 @@
   "description": "WertWidget Themes Helper",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p . && npm run generate-styles",
+    "generate-styles": "node generate-styles.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "dependencies": {
     "@types/color": "^3.0.2",
-    "color": "^4.1.0"
+    "color": "^4.1.0",
+    "stylus": "^0.55.0"
   }
 }
