@@ -22,7 +22,7 @@ import {
   defaultSemanticColors,
   darkSemanticColors,
   makeThemeFromSemantic,
- } from '@wert-io/widget-initializer';
+ } from '@wert-io/widget-themes';
 ```
 
 **makeThemeFromSemantic** function usage example:
@@ -30,7 +30,7 @@ import {
 const customizedColors = {
   ...defaultSemanticColors,
   buttons: '#000000',
- };
+};
 const isDarkTheme = false;
 const themeColors = makeThemeFromSemantic(customizedColors, isDarkTheme);
 ```
