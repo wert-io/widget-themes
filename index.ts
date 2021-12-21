@@ -6,6 +6,7 @@ import {
   darkenColor,
   transparizeColor,
   getRGBArray,
+  isValidColor,
 } from './helpers/colors-transformations';
 
 interface semanticColors {
@@ -98,4 +99,5 @@ export = {
   defaultSemanticColors,
   darkSemanticColors,
   makeThemeFromSemantic,
+  isValidColor,
 };

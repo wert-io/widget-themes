@@ -16,10 +16,22 @@ const getRGBArray = (colorString: string): number[] => {
 
   return color.rgb().array();
 };
+const isValidColor = (value: string): boolean => {
+  let isValidColor = true;
+
+  try {
+    Color(value);
+  } catch (error) {
+    isValidColor = false;
+  }
+
+  return isValidColor;
+};
 
 export {
   lightenColor,
   darkenColor,
   transparizeColor,
   getRGBArray,
+  isValidColor,
 };

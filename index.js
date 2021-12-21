@@ -66,4 +66,5 @@ module.exports = {
     defaultSemanticColors,
     darkSemanticColors,
     makeThemeFromSemantic,
+    isValidColor: colors_transformations_1.isValidColor,
 };
