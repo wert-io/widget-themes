@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isValidColor = exports.getRGBArray = exports.transparizeColor = exports.darkenColor = exports.lightenColor = void 0;
+exports.isValidColor = exports.isDarkColor = exports.transparizeColor = exports.lightenColor = exports.darkenColor = exports.getRGBArray = void 0;
 const color_1 = __importDefault(require("color"));
 const lightenColor = (colorString, amount) => {
     const color = (0, color_1.default)(colorString);
@@ -33,3 +33,5 @@ const isValidColor = (value) => {
     return isValidColor;
 };
 exports.isValidColor = isValidColor;
+const isDarkColor = (value) => new color_1.default(value).isDark();
+exports.isDarkColor = isDarkColor;

@@ -2,10 +2,11 @@ import defaultSemantic from './themes/default.json';
 import darkSemantic from './themes/dark.json';
 
 import {
-  lightenColor,
-  darkenColor,
-  transparizeColor,
   getRGBArray,
+  darkenColor,
+  lightenColor,
+  transparizeColor,
+  isDarkColor,
   isValidColor,
 } from './helpers/colors-transformations';
 
@@ -99,5 +100,6 @@ export = {
   defaultSemanticColors,
   darkSemanticColors,
   makeThemeFromSemantic,
+  isDarkColor,
   isValidColor,
 };

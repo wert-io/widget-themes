@@ -27,11 +27,13 @@ const isValidColor = (value: string): boolean => {
 
   return isValidColor;
 };
+const isDarkColor = (value: string): boolean => new Color(value).isDark();
 
 export {
-  lightenColor,
-  darkenColor,
-  transparizeColor,
   getRGBArray,
+  darkenColor,
+  lightenColor,
+  transparizeColor,
+  isDarkColor,
   isValidColor,
 };

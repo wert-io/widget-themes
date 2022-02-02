@@ -21,6 +21,7 @@ declare const _default: {
     defaultSemanticColors: semanticColors;
     darkSemanticColors: semanticColors;
     makeThemeFromSemantic: (semanticColors: semanticColors, isDarkTheme: boolean) => theme;
+    isDarkColor: (value: string) => boolean;
     isValidColor: (value: string) => boolean;
 };
 export = _default;
