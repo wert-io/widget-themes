@@ -2,7 +2,6 @@
   "background": "#FFFFFF",
   "buttons": "#161D25",
   "buttons-text": "#FDFDFD",
-  "icons": "#BBC0DC",
   "links": "#2D35E8",
   "main-text": "#161D25",
   "scroll-thumb": "#D2D3D4",
@@ -11,7 +10,7 @@
   "secondary-buttons-text": "#161D25",
   "secondary-text": "#8E8EAE",
 
-  "success": "#58D443",
-  "warning": "#FBAC19",
-  "error": "#E2232B"
+  "success": "#00BF63",
+  "warning": "#FF9A34",
+  "error": "#FF003D"
 }

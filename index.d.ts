@@ -2,7 +2,6 @@ interface semanticColors {
     background: string;
     buttons: string;
     'buttons-text': string;
-    icons: string;
     links: string;
     'main-text': string;
     'scroll-thumb': string;
