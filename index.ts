@@ -96,7 +96,7 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
       'secondary-buttons-active': darkenColor(semanticColors['secondary-buttons'], 10),
       'secondary-buttons-hover': darkenColor(semanticColors['secondary-buttons'], 5),
       'success-background': lightenColor(semanticColors.success, 35),
-      'tooltip-background': semanticColors.background,
+      'tooltip-background': semanticColors.buttons,
       'warning-background': lightenColor(semanticColors.warning, 35),
     };
   }
