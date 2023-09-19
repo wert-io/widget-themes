@@ -63,6 +63,9 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
         'input-line-active': `rgba(${buttonsColorRGBArray.join(', ')}, 0.6)`,
         'input-line-disable': `rgba(${iconsColorRGBArray.join(', ')}, 0.3)`,
         'main-text-inactive': (0, colors_transformations_1.transparizeColor)(semanticColors['main-text'], 0.2),
+        'secondary-text-hover': (0, colors_transformations_1.darkenColor)(semanticColors['secondary-text'], 10),
+        'icons-active': (0, colors_transformations_1.darkenColor)(semanticColors['secondary-text'], 15),
+        'success-icons': (0, colors_transformations_1.lightenColor)(semanticColors.success, 5),
     };
     return Object.assign(Object.assign(Object.assign({}, semanticColors), commonComputedColors), themeRelatedComputedColors);
 };
