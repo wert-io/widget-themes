@@ -44,6 +44,9 @@ interface computedColors {
   'success-background'?: string
   'tooltip-background'?: string
   'warning-background'?: string
+  'secondary-text-hover'?: string
+  'icons-active'?: string
+  'success-icons'?: string
 }
 interface theme {
   [x: string]: string
@@ -110,6 +113,9 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
     'input-line-active': `rgba(${buttonsColorRGBArray.join(', ')}, 0.6)`,
     'input-line-disable': `rgba(${iconsColorRGBArray.join(', ')}, 0.3)`,
     'main-text-inactive': transparizeColor(semanticColors['main-text'], 0.2),
+    'secondary-text-hover': darkenColor(semanticColors['secondary-text'], 10),
+    'icons-active': darkenColor(semanticColors['secondary-text'], 15),
+    'success-icons': lightenColor(semanticColors.success, 5),
   };
 
   return {
