@@ -9,7 +9,6 @@ const defaultSemanticColors = default_json_1.default;
 const darkSemanticColors = dark_json_1.default;
 const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
     const buttonsColorRGBArray = (0, colors_transformations_1.getRGBArray)(semanticColors.buttons);
-    const secondaryTextColorRGBArray = (0, colors_transformations_1.getRGBArray)(semanticColors['secondary-text']);
     const backgroundColorRGBArray = (0, colors_transformations_1.getRGBArray)(semanticColors.background);
     let themeRelatedComputedColors = {};
     if (isDarkTheme) {
@@ -59,10 +58,13 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
         'background-zero-opacity': `rgba(${backgroundColorRGBArray.join(', ')}, 0)`,
         'buttons-inactive': (0, colors_transformations_1.transparizeColor)(semanticColors.buttons, 0.03),
         divider: (0, colors_transformations_1.transparizeColor)(semanticColors['secondary-text'], 0.4),
-        'input-line': `rgba(${secondaryTextColorRGBArray.join(', ')}, 0.6)`,
-        'input-line-active': `rgba(${buttonsColorRGBArray.join(', ')}, 0.6)`,
+        'input-line': (0, colors_transformations_1.darkenColor)(semanticColors['secondary-buttons'], 10),
+        'input-line-active': (0, colors_transformations_1.lightenColor)(semanticColors['secondary-text'], 10),
         'input-line-disable': `rgba(${iconsColorRGBArray.join(', ')}, 0.3)`,
+        'input-line-hover': (0, colors_transformations_1.rotateColor)((0, colors_transformations_1.darkenColor)(semanticColors['secondary-buttons'], 15), 20),
         'main-text-inactive': (0, colors_transformations_1.transparizeColor)(semanticColors['main-text'], 0.2),
+        'main-text-hover': (0, colors_transformations_1.lightenColor)((0, colors_transformations_1.desaturateColor)(semanticColors['main-text'], 0.24), 18),
+        'main-text-active': (0, colors_transformations_1.rotateColor)((0, colors_transformations_1.lightenColor)((0, colors_transformations_1.desaturateColor)(semanticColors['main-text'], 0.28), 26), -2),
         'secondary-text-hover': (0, colors_transformations_1.darkenColor)(semanticColors['secondary-text'], 10),
         'icons-active': (0, colors_transformations_1.darkenColor)(semanticColors['secondary-text'], 15),
         'success-icons': (0, colors_transformations_1.lightenColor)(semanticColors.success, 5),

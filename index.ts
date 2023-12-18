@@ -6,6 +6,8 @@ import {
   darkenColor,
   lightenColor,
   transparizeColor,
+  desaturateColor,
+  rotateColor,
   isDarkColor,
   isValidColor,
 } from './helpers/colors-transformations';
@@ -44,9 +46,6 @@ interface computedColors {
   'success-background'?: string
   'tooltip-background'?: string
   'warning-background'?: string
-  'secondary-text-hover'?: string
-  'icons-active'?: string
-  'success-icons'?: string
 }
 interface theme {
   [x: string]: string
@@ -57,7 +56,6 @@ const darkSemanticColors = <semanticColors> darkSemantic;
 
 const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: boolean): theme => {
   const buttonsColorRGBArray = getRGBArray(semanticColors.buttons);
-  const secondaryTextColorRGBArray = getRGBArray(semanticColors['secondary-text']);
   const backgroundColorRGBArray = getRGBArray(semanticColors.background);
 
   let themeRelatedComputedColors = <computedColors> {};
@@ -109,10 +107,13 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
     'background-zero-opacity': `rgba(${backgroundColorRGBArray.join(', ')}, 0)`,
     'buttons-inactive': transparizeColor(semanticColors.buttons, 0.03),
     divider: transparizeColor(semanticColors['secondary-text'], 0.4),
-    'input-line': `rgba(${secondaryTextColorRGBArray.join(', ')}, 0.6)`,
-    'input-line-active': `rgba(${buttonsColorRGBArray.join(', ')}, 0.6)`,
+    'input-line': darkenColor(semanticColors['secondary-buttons'], 10),
+    'input-line-active': lightenColor(semanticColors['secondary-text'], 10),
     'input-line-disable': `rgba(${iconsColorRGBArray.join(', ')}, 0.3)`,
+    'input-line-hover': rotateColor(darkenColor(semanticColors['secondary-buttons'], 15), 20),
     'main-text-inactive': transparizeColor(semanticColors['main-text'], 0.2),
+    'main-text-hover': lightenColor(desaturateColor(semanticColors['main-text'], 0.24), 18),
+    'main-text-active': rotateColor(lightenColor(desaturateColor(semanticColors['main-text'], 0.28), 26), -2),
     'secondary-text-hover': darkenColor(semanticColors['secondary-text'], 10),
     'icons-active': darkenColor(semanticColors['secondary-text'], 15),
     'success-icons': lightenColor(semanticColors.success, 5),
