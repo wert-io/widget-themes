@@ -1,13 +1,15 @@
 {
   "background": "#040405",
   "buttons": "#0066FF",
-  "buttons-text": "#FDFDFD",
+  "buttons-text": "#FFFFFF",
   "links": "#0066FF",
-  "main-text": "#FDFDFD",
+  "main-text": "#FFFFFF",
   "scroll-thumb": "#4C4C4C",
   "scroll-track": "#1F2732",
   "secondary-buttons": "#43434C",
-  "secondary-buttons-text": "#FDFDFD",
+  "buttons-inactive": "#1B1B21",
+  "main-text-inactive": "#37373E",
+  "secondary-buttons-text": "#FFFFFF",
   "secondary-text": "#8B8B9B",
 
   "success": "#00F99F",

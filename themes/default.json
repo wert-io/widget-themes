@@ -1,12 +1,14 @@
 {
   "background": "#FFFFFF",
   "buttons": "#161D25",
-  "buttons-text": "#FDFDFD",
+  "buttons-text": "#FFFFFF",
   "links": "#2D35E8",
   "main-text": "#161D25",
   "scroll-thumb": "#D2D3D4",
   "scroll-track": "#F5F6F8",
   "secondary-buttons": "#F5F6F8",
+  "buttons-inactive": "#F5F6F8",
+  "main-text-inactive": "#C8C8D9",
   "secondary-buttons-text": "#161D25",
   "secondary-text": "#8E8EAE",
 
