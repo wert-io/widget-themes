@@ -16,7 +16,6 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
             'buttons-active': (0, colors_transformations_1.darkenColor)(semanticColors.buttons, 10),
             'buttons-hover': (0, colors_transformations_1.darkenColor)(semanticColors.buttons, 5),
             'buttons-shadow': 'rgba(0, 0, 0, 0.2)',
-            'buttons-inactive': (0, colors_transformations_1.rotateColor)((0, colors_transformations_1.desaturateColor)((0, colors_transformations_1.darkenColor)(semanticColors.buttons, 38), 0.9), 26),
             'main-text-inactive': (0, colors_transformations_1.desaturateColor)((0, colors_transformations_1.darkenColor)(semanticColors['secondary-text'], 35), 0.2),
             'error-background': (0, colors_transformations_1.darkenColor)(semanticColors.error, 35),
             highlight: (0, colors_transformations_1.lightenColor)(semanticColors['secondary-buttons'], 5),
@@ -48,7 +47,6 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
             'buttons-active': (0, colors_transformations_1.lightenColor)(semanticColors.buttons, 10),
             'buttons-hover': (0, colors_transformations_1.lightenColor)(semanticColors.buttons, 5),
             'buttons-shadow': `rgba(${buttonsColorRGBArray.join(', ')}, 0.15)`,
-            'buttons-inactive': (0, colors_transformations_1.rotateColor)((0, colors_transformations_1.desaturateColor)((0, colors_transformations_1.lightenColor)(semanticColors.buttons, 85), 0.4), 8),
             'main-text-inactive': (0, colors_transformations_1.lightenColor)(semanticColors['secondary-text'], 20),
             'error-background': (0, colors_transformations_1.lightenColor)(semanticColors.error, 35),
             highlight: (0, colors_transformations_1.darkenColor)(semanticColors['secondary-buttons'], 5),
@@ -77,6 +75,7 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
     }
     const commonComputedColors = {
         'background-zero-opacity': `rgba(${backgroundColorRGBArray.join(', ')}, 0)`,
+        'buttons-inactive': (0, colors_transformations_1.transparizeColor)(semanticColors.buttons, 0.03),
         divider: (0, colors_transformations_1.transparizeColor)(semanticColors['secondary-text'], 0.4),
         'success-icons': (0, colors_transformations_1.lightenColor)(semanticColors.success, 5),
     };

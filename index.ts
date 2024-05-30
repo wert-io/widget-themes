@@ -33,7 +33,6 @@ interface computedColors {
   'buttons-active'?: string
   'buttons-hover'?: string
   'buttons-shadow'?: string
-  'buttons-inactive'?: string
   'main-text-inactive'?: string
   'error-background'?: string
   highlight?: string
@@ -77,7 +76,6 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
       'buttons-active': darkenColor(semanticColors.buttons, 10),
       'buttons-hover': darkenColor(semanticColors.buttons, 5),
       'buttons-shadow': 'rgba(0, 0, 0, 0.2)',
-      'buttons-inactive': rotateColor(desaturateColor(darkenColor(semanticColors.buttons, 38), 0.9), 26),
       'main-text-inactive': desaturateColor(darkenColor(semanticColors['secondary-text'], 35), 0.2),
       'error-background': darkenColor(semanticColors.error, 35),
       highlight: lightenColor(semanticColors['secondary-buttons'], 5),
@@ -108,7 +106,6 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
       'buttons-active': lightenColor(semanticColors.buttons, 10),
       'buttons-hover': lightenColor(semanticColors.buttons, 5),
       'buttons-shadow': `rgba(${buttonsColorRGBArray.join(', ')}, 0.15)`,
-      'buttons-inactive': rotateColor(desaturateColor(lightenColor(semanticColors.buttons, 85), 0.4), 8),
       'main-text-inactive': lightenColor(semanticColors['secondary-text'], 20),
       'error-background': lightenColor(semanticColors.error, 35),
       highlight: darkenColor(semanticColors['secondary-buttons'], 5),
@@ -138,6 +135,7 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
 
   const commonComputedColors = {
     'background-zero-opacity': `rgba(${backgroundColorRGBArray.join(', ')}, 0)`,
+    'buttons-inactive': transparizeColor(semanticColors.buttons, 0.03),
     divider: transparizeColor(semanticColors['secondary-text'], 0.4),
     'success-icons': lightenColor(semanticColors.success, 5),
   };
