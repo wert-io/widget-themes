@@ -33,7 +33,6 @@ interface computedColors {
   'buttons-active'?: string
   'buttons-hover'?: string
   'buttons-shadow'?: string
-  'main-text-inactive'?: string
   'error-background'?: string
   highlight?: string
   icons?: string
@@ -75,8 +74,7 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
     themeRelatedComputedColors = {
       'buttons-active': darkenColor(semanticColors.buttons, 10),
       'buttons-hover': darkenColor(semanticColors.buttons, 5),
-      'buttons-shadow': 'rgba(0, 0, 0, 0.2)',
-      'main-text-inactive': desaturateColor(darkenColor(semanticColors['secondary-text'], 35), 0.2),
+      'buttons-shadow': 'rgba(247, 247, 247, 0.10)',
       'error-background': darkenColor(semanticColors.error, 35),
       highlight: lightenColor(semanticColors['secondary-buttons'], 5),
       icons: semanticColors['secondary-text'],
@@ -105,8 +103,7 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
     themeRelatedComputedColors = {
       'buttons-active': lightenColor(semanticColors.buttons, 10),
       'buttons-hover': lightenColor(semanticColors.buttons, 5),
-      'buttons-shadow': `rgba(${buttonsColorRGBArray.join(', ')}, 0.15)`,
-      'main-text-inactive': lightenColor(semanticColors['secondary-text'], 20),
+      'buttons-shadow': `rgba(${buttonsColorRGBArray.join(', ')}, 0.10)`,
       'error-background': lightenColor(semanticColors.error, 35),
       highlight: darkenColor(semanticColors['secondary-buttons'], 5),
       icons: lightenColor(semanticColors['secondary-text'], 10),
@@ -137,6 +134,7 @@ const makeThemeFromSemantic = (semanticColors: semanticColors, isDarkTheme: bool
     'background-zero-opacity': `rgba(${backgroundColorRGBArray.join(', ')}, 0)`,
     'buttons-inactive': transparizeColor(semanticColors.buttons, 0.03),
     divider: transparizeColor(semanticColors['secondary-text'], 0.4),
+    'main-text-inactive': transparizeColor(semanticColors['main-text'], 0.2),
     'success-icons': lightenColor(semanticColors.success, 5),
   };
 

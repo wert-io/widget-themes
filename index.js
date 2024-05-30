@@ -15,8 +15,7 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
         themeRelatedComputedColors = {
             'buttons-active': (0, colors_transformations_1.darkenColor)(semanticColors.buttons, 10),
             'buttons-hover': (0, colors_transformations_1.darkenColor)(semanticColors.buttons, 5),
-            'buttons-shadow': 'rgba(0, 0, 0, 0.2)',
-            'main-text-inactive': (0, colors_transformations_1.desaturateColor)((0, colors_transformations_1.darkenColor)(semanticColors['secondary-text'], 35), 0.2),
+            'buttons-shadow': 'rgba(247, 247, 247, 0.10)',
             'error-background': (0, colors_transformations_1.darkenColor)(semanticColors.error, 35),
             highlight: (0, colors_transformations_1.lightenColor)(semanticColors['secondary-buttons'], 5),
             icons: semanticColors['secondary-text'],
@@ -46,8 +45,7 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
         themeRelatedComputedColors = {
             'buttons-active': (0, colors_transformations_1.lightenColor)(semanticColors.buttons, 10),
             'buttons-hover': (0, colors_transformations_1.lightenColor)(semanticColors.buttons, 5),
-            'buttons-shadow': `rgba(${buttonsColorRGBArray.join(', ')}, 0.15)`,
-            'main-text-inactive': (0, colors_transformations_1.lightenColor)(semanticColors['secondary-text'], 20),
+            'buttons-shadow': `rgba(${buttonsColorRGBArray.join(', ')}, 0.10)`,
             'error-background': (0, colors_transformations_1.lightenColor)(semanticColors.error, 35),
             highlight: (0, colors_transformations_1.darkenColor)(semanticColors['secondary-buttons'], 5),
             icons: (0, colors_transformations_1.lightenColor)(semanticColors['secondary-text'], 10),
@@ -77,6 +75,7 @@ const makeThemeFromSemantic = (semanticColors, isDarkTheme) => {
         'background-zero-opacity': `rgba(${backgroundColorRGBArray.join(', ')}, 0)`,
         'buttons-inactive': (0, colors_transformations_1.transparizeColor)(semanticColors.buttons, 0.03),
         divider: (0, colors_transformations_1.transparizeColor)(semanticColors['secondary-text'], 0.4),
+        'main-text-inactive': (0, colors_transformations_1.transparizeColor)(semanticColors['main-text'], 0.2),
         'success-icons': (0, colors_transformations_1.lightenColor)(semanticColors.success, 5),
     };
     return Object.assign(Object.assign(Object.assign({}, semanticColors), commonComputedColors), themeRelatedComputedColors);
